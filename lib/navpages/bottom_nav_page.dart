@@ -37,7 +37,7 @@ class _BottomNavPageState extends State<BottomNavPage> {
           onTap: onTap,
           currentIndex: currentIndex,
           iconSize: 25,
-          unselectedItemColor: Colors.grey.withOpacity(0.5),
+          unselectedItemColor: Colors.redAccent.withOpacity(0.5),
           selectedItemColor: Colors.black,
           // selectedIconTheme: IconThemeData(
           // color: Colors.blue,

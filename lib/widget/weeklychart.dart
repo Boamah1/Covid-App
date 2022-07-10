@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WeeklyChart extends StatelessWidget {
   const WeeklyChart({Key? key}) : super(key: key);
@@ -7,7 +8,7 @@ class WeeklyChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 1.7,
+      aspectRatio: 1.4.r,
       child: BarChart(
         BarChartData(
           barGroups: getBarGroups(),
@@ -40,10 +41,11 @@ class WeeklyChart extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 8.0),
                     child: Text(
                       day,
-                      style: const TextStyle(
-                        color: Color(0xFF7589A2),
-                        fontSize: 10,
-                        fontWeight: FontWeight.w200,
+                      style: TextStyle(
+                        color: Colors.red,
+                        //Color(0xFF7589A2),
+                        fontSize: 10.sp,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   );
@@ -68,7 +70,7 @@ getBarGroups() {
               BarChartRodData(
                 toY: value,
                 //This is not the proper way, this is just for demo
-                color: i == 4 ? Color(0xff0d8e53) : Color(0xffeaecef),
+                color: i == 6 ? Color(0xff0d8e53) : Color(0xffeaecef),
                 width: 16,
               )
             ],

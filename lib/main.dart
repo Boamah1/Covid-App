@@ -9,9 +9,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
-  // SystemChrome.setPreferredOrientations(
-  // how to prevent the phone from rotating👇🏿
-  // [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(const MyApp());
 }
 
@@ -21,6 +18,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+  //    SystemChrome.setPreferredOrientations(
+  // //how to prevent the phone from rotating👇🏿
+  // [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
     return ScreenUtilInit(
       designSize: const Size(360, 690),
       minTextAdapt: true,
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const StatisticsPage(),
+      child: const WelcomePage(),
     );
     // MaterialApp(
     //   debugShowCheckedModeBanner: false,

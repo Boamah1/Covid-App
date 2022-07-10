@@ -18,8 +18,9 @@ class _WelcomePageState extends State<WelcomePage> {
         Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/cover2.png"),
-                fit: BoxFit.cover),
+              image: AssetImage("assets/images/cover2.png"),
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         Scaffold(
@@ -29,7 +30,7 @@ class _WelcomePageState extends State<WelcomePage> {
               child: Column(
                 children: [
                   Container(
-                    margin:   EdgeInsets.only(
+                    margin: EdgeInsets.only(
                       top: 40.h,
                     ),
                     width: double.maxFinite,
@@ -39,17 +40,19 @@ class _WelcomePageState extends State<WelcomePage> {
                           child: Text(
                             "The Covid-19",
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold),
+                              color: Colors.white,
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                         Text(
                           "App 😷",
                           style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold),
+                            color: Colors.black,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ],
                     ),
@@ -59,8 +62,13 @@ class _WelcomePageState extends State<WelcomePage> {
                   ),
                   Container(
                     margin: const EdgeInsets.only(bottom: 20),
-                    child: InkWell(
-                      onTap: () {
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // Navigator.of(context).pushReplacement(
+                        //   MaterialPageRoute(
+                        //     builder: (_) => BottomNavPage(),
+                        //   ),
+                        // );
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -68,20 +76,33 @@ class _WelcomePageState extends State<WelcomePage> {
                           ),
                         );
                       },
-                      child: Container(
-                          margin: const EdgeInsets.only(left: 70, right: 70),
-                          height: 50,
-                          width: double.maxFinite,
-                          decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.5),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Center(
-                            child: Apptext(
-                              text: "Learn Awaareness",
-                              size: 20,
-                            ),
-                          )),
+                      child: Center(
+                        child: Apptext(
+                          text: "Learn Awaareness",
+                          size: 17.sp,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.r),
+                        ),
+                        maximumSize: Size(230.w, 44.3.h),
+                      ),
+                      // Container(
+                      //   margin: const EdgeInsets.only(left: 70, right: 70),
+                      //   height: 50,
+                      //   width: double.maxFinite,
+                      //   decoration: BoxDecoration(
+                      //     color: Colors.grey.withOpacity(0.5),
+                      //     borderRadius: BorderRadius.circular(20),
+                      //   ),
+                      //   child: Center(
+                      //     child: Apptext(
+                      //       text: "Learn Awaareness",
+                      //       size: 20,
+                      //     ),
+                      //   ),
+                      // ),
                     ),
                   )
                 ],
